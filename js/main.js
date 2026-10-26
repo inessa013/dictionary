@@ -89,6 +89,7 @@ if(!listDictionary){
     const arr = await response.json();
     console.log(arr);
     localStorage.setItem('listDictionary', JSON.stringify(arr));
+    listDictionary = arr;
 } else {
     listDictionary = JSON.parse(listDictionary);
 }
