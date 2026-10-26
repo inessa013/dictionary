@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 26px;
+}
+
+.header__intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+}
+

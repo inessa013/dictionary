@@ -1,0 +1,51 @@
+:root {
+    --color-amber: #e0b25e;
+    --color-background-amber: rgba(224,178,94,0.15);
+    --color-accent: #933742; 
+    --color-accent-a3:rgba(147, 55, 66, 0.3);
+    --color-accent-a1: rgba(147, 55, 66, 0.15);
+    --color-accent-a8: #a247523e; 
+    /* #e8c3c6  #dea1a6*/
+    --color-accent-a: #e8c3c6;
+    --color-background-primary: #0c0c0c;
+    /* #eeeeee */
+    --color-background-secondary: #1c1c1c;
+    --color-border: #2b2a2a;
+    /* #efefef */
+    --color-text: #f3eeee;
+    --color-text-secondary: #9c9195;
+    --color-hover: #9a2734;
+    --color-hover-a: var(var(--color-border));
+    --color-active: #87111f;
+    --color-active-a: #3a3939;
+    --color-valid: #3fae5b; /*#6fcf87*/;
+    --color-invalid: var(--color-accent);
+
+    --color-input-focus: var(--color-accent);
+
+    --border-radius: 13px;
+    --transition-duration:  .3s;
+    --gap: 18px;
+
+
+    /* js */
+    --test-progress-procent: 0%;
+    --url-img: url("../../img/vocabtrainer.png");
+}
+
+.light-theme {
+    --color-accent: #e8c3c6;
+    --color-accent-a: #933742;
+    --color-background-primary: #fff;
+    --color-background-secondary: #eeeae9;
+    --color-border: #dddddd;
+    --color-text: #0c0c0c;
+    --color-active: #d8848b;
+    --color-hover: #efa7ad;
+    --color-active-a: #fdd1d5;
+    --color-hover-a: #fce3e5;
+    --color-input-focus: var(--color-accent-a);
+    --color-invalid: var(--color-active);
+
+     --url-img: url("../../img/vocabtrainer_light.png");
+}

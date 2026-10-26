@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="shortcut icon" href="./img/star.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="svg-valid" viewBox="0 0 24 24">
+            <path d="m4 12 5.5 6L20 6" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </symbol>
+        <symbol id="svg-invalid" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z"></path>
+        </symbol>
+        <symbol id="svg-reload" viewBox="0 0 512 512">
+            <path d="M446.025,92.206c-40.762-42.394-97.487-69.642-160.383-72.182c-15.791-0.638-29.114,11.648-29.752,27.433 c-0.638,15.791,11.648,29.114,27.426,29.76c47.715,1.943,90.45,22.481,121.479,54.681c30.987,32.235,49.956,75.765,49.971,124.011 c-0.015,49.481-19.977,94.011-52.383,126.474c-32.462,32.413-76.999,52.368-126.472,52.382 c-49.474-0.015-94.025-19.97-126.474-52.382c-32.405-32.463-52.368-76.992-52.382-126.474c0-3.483,0.106-6.938,0.302-10.364 l34.091,16.827c3.702,1.824,8.002,1.852,11.35,0.086c3.362-1.788,5.349-5.137,5.264-8.896l-3.362-149.834 c-0.114-4.285-2.88-8.357-7.094-10.464c-4.242-2.071-9.166-1.809-12.613,0.738L4.008,182.45c-3.05,2.221-4.498,5.831-3.86,9.577 c0.61,3.759,3.249,7.143,6.966,8.974l35.722,17.629c-1.937,12.166-3.018,24.602-3.018,37.279 c-0.014,65.102,26.475,124.31,69.153,166.944C151.607,465.525,210.8,492.013,275.91,492 c65.095,0.014,124.302-26.475,166.937-69.146c42.678-42.635,69.167-101.842,69.154-166.944 C512.014,192.446,486.844,134.565,446.025,92.206z"></path>
+        </symbol>
+        <symbol id="svg-plus" viewBox="0 0 32 32">
+            <path d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-2.496-1.76-4.256t-4.224-1.76h-20q-2.496 0-4.256 1.76t-1.76 4.256v20zM4 26.016v-20q0-0.832 0.576-1.408t1.44-0.608h20q0.8 0 1.408 0.608t0.576 1.408v20q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM8 16q0 0.832 0.576 1.44t1.44 0.576h4v4q0 0.832 0.576 1.408t1.408 0.576 1.408-0.576 0.608-1.408v-4h4q0.8 0 1.408-0.576t0.576-1.44-0.576-1.408-1.408-0.576h-4v-4q0-0.832-0.608-1.408t-1.408-0.608-1.408 0.608-0.576 1.408v4h-4q-0.832 0-1.44 0.576t-0.576 1.408z"></path>
+        </symbol>
+       <symbol id="svg-pen" viewBox="0 0 64 64">
+            <path d="M56.009,51.832v4.2l-33.652-.026 4.709-4.174h28.943Z"/>
+            <path d="M48.453,8.119c1.65,0 2.506.129 4.753,2.011 2.294,1.922 2.707,3.42 2.803,5.088.102,1.795-.504,3.975-2.188,5.681L21.86,52.86c-.52.475-.63.449-.977.553l-10.226,2.556c-1.472.299-2.854-1.049-2.55-2.549l2.557-10.226c.1-.334.133-.517.553-.977C21.913,31.501 32.412,20.604 43.307,10.11c1.421-1.335 3.497-2.011 5.146-2.011Zm0,4.143c-.86.016-1.698.371-2.311.976L14.602,44.779l-1.566,6.261 6.262-1.565c10.544-10.544 21.419-20.768 31.63-31.634 1.674-1.825.444-5.453-2.306-5.577-.056-.002-.112-.003-.169-.002Z"/>
+        </symbol>
+        <symbol id="svg-star" viewBox="0 0 100 100">
+            <path
+                d="M50 0
+                    C52.5 24 54 40 63 46
+                    C70 48 80 49 96 50
+                    C80 51 70 52 63 54
+                    C54 60 52.5 76 50 100
+                    C47.5 76 46 60 37 54
+                    C30 52 20 51 4 50
+                    C20 49 30 48 37 46
+                    C46 40 47.5 24 50 0 Z"/>
+        </symbol>
+    </svg>
+    <div class="dashboard" data-dashboard>
+        <aside class="aside">
+            <a href="/" class="aside__logo">VocabTrainer</a>
+            <div class="aside__wrapper">
+                <nav class="aside__menu menu" data-menu>
+                    <ul class="menu__list">
+                        <li class="menu__item"><button type="button" class="menu__btn" data-section-btn="home">Home</button></li>
+                        <li class="menu__item"><button type="button" class="menu__btn" data-section-btn="dictionary">Dictionary</button></li>
+                        <li class="menu__item"><button type="button" class="menu__btn" data-section-btn="test">Test</button></li>
+                        <li class="menu__item"><button type="button" class="menu__btn" data-section-btn="statistics">Statistics</button></li>
+                    </ul>
+                </nav>
+                <button class="aside__btn" data-btn="theme-toggle">Dark / Light</button>
+            </div>
+        </aside>
+        <main class="main">
+            <section class="home section hidden" data-section="home">
+                 <header class="home__header header">
+                    <div class="home__intro-wrapper header__intro-wrapper">
+                        <h2 class="home__title title">
+                            Home
+                        </h2>
+                        <span class="home__subtitle subtitle">
+                            Welcome back, User!
+                        </span>
+                    </div>
+                    <button type="button" class="home__button btn" data-home-btn="test">Start Test</button>
+                </header>
+                <div class="home__body" data-section-body="home">
+                    <div class="home__information block">
+                        <div class="home__information-wrapper">   
+                            <h2 class="home__information-title">Your Personal Dictionary</h2>
+                            <p class="home__information-text">
+                               Build your vocabulary, one word at a time. Create personal dictionaries, learn new words, test your knowledge, and track your progress.
+                            </p>
+                            <ul class="home__information-list">
+                                <li class="home__information-item"> 
+                                    <svg>
+                                        <use href="#svg-star"></use>
+                                    </svg>
+                                    <span>Dictionaries — browse existing vocabulary and create your own collections.</span>
+                                </li>
+                                <li class="home__information-item"> 
+                                    <svg>
+                                        <use href="#svg-star"></use>
+                                    </svg>
+                                    <span>Practice Tests — test your knowledge with different modes and settings.</span>
+                                </li>
+                                <li class="home__information-item"> 
+                                    <svg>
+                                        <use href="#svg-star"></use>
+                                    </svg>
+                                    <span>Statistics — track your results and monitor your progress.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="home__information-img">
+                            <!-- <img src="./img/vocabtrainer.png" alt=""> -->
+                        </div>
+                    </div>
+                    <ul class="home__row">
+                       <li class="home__item">
+                        <button type="button" class="home__btn block" data-home-btn="start-test">
+                            <div class="home__btn-img-wrapper">
+                                <svg>
+                                    <use href="#svg-pen"></use>
+                                </svg>
+                            </div>
+                            <span class="home__btn-title">Start a test</span>
+                            <span class="home__btn-desc">10 words · EN → RU</span>
+                        </button>
+                       </li>
+                       <li class="home__item">
+                        <button type="button" class="home__btn block" data-home-btn="dictionary">
+                            <div class="home__btn-img-wrapper">
+                                <svg fill="#fff">
+                                    <use href="#svg-plus"></use>
+                                </svg>
+                            </div>
+                            <span class="home__btn-title">Add New Word</span>
+                            <span class="home__btn-desc">Grow your vocabulary</span>
+                        </button>
+                       </li>
+                       <li class="home__item">
+                        <button type="button" class="home__btn block" data-home-btn="test-completed">
+                            <div class="home__btn-img-wrapper">
+                                <svg>
+                                    <use href="#svg-valid"></use>
+                                </svg>
+                            </div>
+                            <span class="home__btn-title">Tests Completed</span>
+                            <span class="home__btn-desc" data-home="test-completed"></span>
+                        </button>
+                       </li>
+                       <li class="home__item">
+                        <button type="button" class="home__btn home__btn--disable block" data-home-btn="">
+                            <div class="home__btn-img-wrapper">
+                                <svg>
+                                    <use href="#svg-reload"></use>
+                                </svg>
+                            </div>
+                            <span class="home__btn-title">Rentry Mistakes</span>
+                            <span class="home__btn-desc">
+                                <span data-home="count-answer-incorect">9</span>
+                                <span> words need practice</span>
+                            </span>
+                        </button>
+                       </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="dictionary section hidden" data-section="dictionary">
+                <header class="dictionary__header header">
+                    <div class="dictionary__intro-wrapper header__intro-wrapper">
+                        <h2 class="dictionary__title title">
+                            Dictionary
+                        </h2>
+                        <span class="dictionary__subtitle subtitle">
+                            Ready to expand your vocabulary?
+                        </span>
+                    </div>
+                    <button type="button" class="dictionary__button btn" data-dictionary-btn="new-dictionary">+ New Dictionary</button>
+                </header>
+                <div class="dictionary__body" data-section-body="dictionary">
+                    <div class="dictionary__radio-wrapper">
+                        <label for="dictionary-all">
+                            <input type="radio" name="type-dictionary" value="all" id="dictionary-all" checked>
+                            <span>All</span>
+                        </label>
+                        <label for="dictionary-system">
+                            <input type="radio" name="type-dictionary" value="system" id="dictionary-system">
+                            <span>System</span>
+                        </label>
+                        <label for="dictionary-personal">
+                            <input type="radio" name="type-dictionary" value="personal" id="dictionary-personal">
+                            <span>My dictionaries</span>
+                        </label>
+                    </div>
+                    <div class="dictionary__wrapper">
+                       <ul class="dictionary__list" data-dictionary="list"></ul>
+                        <div class="dictionary__right dictionary__system block" data-dictionary="dictionary">
+                           <p class="dictionary__empty">Select a dictionary to view it.</p>                  
+                        </div>
+                    </div>          
+                </div>
+            </section>
+            <section class="test section hidden" data-section="test">
+                <header class="test__header header">
+                    <div class="test__intro-wrapper header__intro-wrapper">
+                        <h2 class="test__title title">
+                            Test
+                        </h2>
+                        <span class="test__subtitle subtitle" data-test-subtitle>
+                        </span>
+                    </div>
+                     <div class="test__button-wrapper" data-test-button="wrapper">
+                     </div>     
+                </header>
+                <div class="test__body" data-section-body="test">
+                </div>
+            </section>
+            <section class="statistics section hidden" data-section="statistics">
+                <header class="statistics__header header">
+                    <div class="statistics__intro-wrapper header__intro-wrapper">
+                        <h2 class="statistics__title title">
+                            Statistics
+                        </h2>
+                        <span class="statistics__subtitle subtitle">
+                            Your learning progress
+                        </span>
+                    </div>
+                    <button class="btn" type="button" data-statistics="delete">Delete Statistics</button>
+                </header>
+                <div class="sections__body" data-section-body="statistics">
+                    <div class="table__wrapper block">
+                        <table data-table="statistics">
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./js/toggleThem.js"></script>
+        <script type="module" src="./js/main.js"></script>
+        <script type="module" src="./js/home.js"></script>
+        <script type="module" src="./js/dictionary.js"></script>
+        <script type="module" src="./js/test.js"></script>
+        <script type="module" src="./js/statistics.js"></script>
+        
+    </div>
+</body>
+</html>
