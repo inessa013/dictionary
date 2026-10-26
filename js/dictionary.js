@@ -336,7 +336,7 @@ function showSystemDictionary(dictionaryValue){
 const newDictionaryBtn = document.querySelector('[data-dictionary-btn="new-dictionary"]');
 
 newDictionaryBtn.addEventListener('click', () => {
-    preventLiEl.classList.remove('dictionary__btn--active');
+    preventLiEl?.classList.remove('dictionary__btn--active');
     preventLiEl = null;
     dictionaryEl.innerHTML = `<div class="dictionary__new-title">Create a New Dictionary</div>
                             <form action="" class="dictionary__new-form" data-form="new-dictionary">
